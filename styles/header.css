@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-color: rgb(var(--accent-color));
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+header > h1 {
+    backdrop-filter: blur(7px) brightness(70%);
+    text-shadow: rgb(var(--accent-color)) 0 0 1rem;
+    padding: 20rem;
+    color: white;
+    margin: 0;
+}
