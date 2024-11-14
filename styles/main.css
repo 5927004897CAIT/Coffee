@@ -42,3 +42,33 @@ body > main img {
 
     user-select: none;
 }
+
+#shop-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    padding-bottom: 0.5rem;
+    user-select: none;
+}
+
+#shop-info > div {
+    background-color: rgb(var(--accent-color));
+    border-radius: 1rem;
+    margin: 0.5rem;
+    padding: 1rem;
+    color: black;
+}
+
+#shop-info > div > h3 {
+    text-align: center;
+    margin: 0;
+}
+
+#shop-info > div > span {
+    display: block;
+    text-align: center;
+}
+
+#shop-info > div > span.header {
+    font-size: 1.90rem;
+}
