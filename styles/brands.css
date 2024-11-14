@@ -21,3 +21,7 @@ h1, h2, h3, h4, h5, h6, .header {
     background-color: Highlight;
     color: HighlightText;
 }
+
+a {
+    color: var(--light-accent);
+}
