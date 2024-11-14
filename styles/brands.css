@@ -1,8 +1,23 @@
 :root {
     --accent-color: 235, 221, 202;
-    --background: 255, 255, 255;
+    --light-accent: 159, 158, 111;
+    --background: 32, 34, 4;
+    --color: 255, 255, 255;
 }
 
 body {
-    background: rgb(var(--background));
+    background-color: rgb(var(--background));
+    color: rgb(var(--color));
+    margin: 0;
+
+    font-family: "stevie-sans", "Avenir", system-ui, "Arial", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .header {
+    font-family: "palast-variable", Georgia, "Times New Roman", serif;
+}
+
+*::selection {
+    background-color: Highlight;
+    color: HighlightText;
 }

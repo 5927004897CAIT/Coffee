@@ -1,0 +1,6 @@
+body > footer {
+    background-color: rgb(var(--accent-color));
+    color: rgb(var(--background));
+    user-select: none;
+    padding: 1rem;
+}

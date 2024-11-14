@@ -1,18 +1,32 @@
-body {
-    margin: 0;
-}
-
-header {
+body > header {
     background-color: rgb(var(--accent-color));
-    background-size: cover;
+    background-image: url("/images/pexels-215906.jpg");
+    background-repeat: no-repeat;
     background-position: center;
-    text-align: center;
+    background-size: cover;
+    max-height: 512px;
+    height: 40vw;
 }
 
-header > h1 {
-    backdrop-filter: blur(7px) brightness(70%);
-    text-shadow: rgb(var(--accent-color)) 0 0 1rem;
-    padding: 20rem;
-    color: white;
-    margin: 0;
+body > header:before {
+    content: "";
+    position: absolute;
+    background-image: url("/images/BrewBarnLogo.svg");
+    background-position: 50% 5%;
+    background-repeat: no-repeat;
+    background-size: 40vw;
+    backdrop-filter: blur(5px) brightness(0.6);
+    max-height: 512px;
+    height: 40vw;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+@media screen and (min-width: 1350px) {
+    body > header:before {
+        background-size: 575px;
+    }
 }

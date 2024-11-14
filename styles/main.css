@@ -1,0 +1,44 @@
+body > main > section {
+    padding: 2rem;
+    max-width: 640px;
+    margin: auto;
+}
+
+body > main > section.light {
+    background-color: rgb(var(--accent-color));
+    transition: border-radius 0.2s;
+    border-radius: 1rem;
+    color: black;
+}
+
+@media screen and (max-width: 705px) {
+    body > main > section.light {
+        border-radius: 0;
+    }
+}
+
+body > main > section h2,
+body > main > section .header {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+}
+
+body > main > section p {
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+body > main > section p:last-child {
+    margin-bottom: 0;
+}
+
+body > main img {
+    margin: 1.5rem 0;
+    border-radius: 1rem;
+    max-width: 640px;
+    height: auto;
+    width: 100%;
+
+    user-select: none;
+}
