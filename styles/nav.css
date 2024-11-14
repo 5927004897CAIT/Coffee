@@ -10,39 +10,58 @@ body > nav {
     grid-template-columns: 1fr auto 1fr;
 }
 
-body > nav a {
+body > nav > div:has(a) {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+body > nav > div > a {
     display: inline-block;
     padding: 0.25rem 0.4rem;
     text-decoration: none;
     color: inherit;
 }
 
-body > nav a:hover {
+body > nav > div > a:hover {
     background-color: rgba(var(--accent-color), 0.5);
 }
 
-body > nav a.border-right {
+body > nav > div > a.border-right {
     border-right: rgb(var(--background)) 1px solid;
 }
 
-body > nav a.border-left {
+body > nav > div > a.border-left {
     border-right: rgb(var(--background)) 1px solid;
 }
 
-body > nav > img {
+body > nav > a:has(img) {
     transform: translateX(calc(-100% - 0.4rem));
     transition: transform 0.2s, opacity 0.2s;
+    align-items: center;
+    display: flex;
+    opacity: 0;
+    width: 0;
+}
+
+body > nav > a > img {
     padding: 0.25rem 0.1rem;
     height: 20px;
     width: auto;
-    opacity: 0;
 }
 
 body > nav.noHeader {
     grid-template-columns: 1fr auto;
 }
 
-body > nav.noHeader > img {
+body > nav.noHeader > a:has(img) {
     transform: translateX(0);
+    width: fit-content;
     opacity: 1;
+}
+
+@media screen and (max-width: 499px) {
+    body > nav.noHeader > div > a:first-child {
+        display: none;
+    }
 }
