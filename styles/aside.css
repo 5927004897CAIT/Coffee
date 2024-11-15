@@ -1,3 +1,43 @@
 aside {
-    
+    color: black;
+    display: flex;
+    user-select: none;
+    border-radius: 1rem;
+    background-color: rgb(var(--accent-color));
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    padding: 1rem;
+    width: 20rem;
+    top: calc(36px * 2);
+    right: 36px;
+}
+
+aside > h2 {
+    margin: 0;
+}
+
+aside > div {
+    padding: 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+aside > div > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    * {margin: 0; font-weight: bold;}
+}
+
+aside > div > p {
+    margin: 0;
+}
+
+@media screen and (max-width: 1568px) {
+    aside {
+        display: none;
+    }
 }
