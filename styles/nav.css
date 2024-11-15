@@ -36,8 +36,9 @@ body > nav > div > a.border-left {
 }
 
 body > nav > a:has(img) {
-    transform: translateX(calc(-100% - 0.4rem));
-    transition: transform 0.2s, opacity 0.2s;
+    left: -100%;
+    position: relative;
+    transition: left 0.2s, opacity 0.2s;
     align-items: center;
     display: flex;
     opacity: 0;
@@ -55,9 +56,9 @@ body > nav.noHeader {
 }
 
 body > nav.noHeader > a:has(img) {
-    transform: translateX(0);
     width: fit-content;
     opacity: 1;
+    left: 0;
 }
 
 @media screen and (max-width: 499px) {

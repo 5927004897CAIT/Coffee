@@ -3,6 +3,7 @@ aside {
     display: flex;
     user-select: none;
     border-radius: 1rem;
+    transition: transform 0.2s, opacity 0.2s;
     background-color: rgb(var(--accent-color));
     flex-flow: column nowrap;
     justify-content: center;
@@ -12,6 +13,14 @@ aside {
     width: 20rem;
     top: calc(36px * 2);
     right: 36px;
+
+    transform: translateX(calc(100% + 36px));
+    opacity: 0;
+}
+
+aside.noCollapse {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 aside > h2 {
@@ -36,8 +45,50 @@ aside > div > p {
     margin: 0;
 }
 
+#aside-toggle {
+    display: none;
+    background-color: rgb(var(--accent-color));
+    border-radius: 0.5rem 0 0 0;
+    user-select: none;
+    position: fixed;
+    padding: 0.5rem;
+    color: black;
+    bottom: 0;
+    right: 0;
+}
+
 @media screen and (max-width: 1568px) {
     aside {
-        display: none;
+        top: unset;
+        right: unset;
+        bottom: 35px;
+
+        opacity: 1;
+        width: calc(100% - 2rem);
+        transition: transform 0.15s;
+        border-radius: 1rem 1rem 0 0;
+        transform: translateY(calc(100% + 36px));
+    }
+
+    aside > div {
+        max-width: 336px;
+    }
+
+    aside.noCollapseLocked {
+        box-shadow: 0 -15px 1rem rgb(var(--background));
+        transform: translateX(0);
+    }
+
+    #aside-toggle {
+        display: block;
+        text-align: right;
+        transition: all 0.1s;
+        min-width: fit-content;
+    }
+
+    #aside-toggle.active {
+        border-radius: unset;
+        font-weight: bold;
+        min-width: 100%;
     }
 }

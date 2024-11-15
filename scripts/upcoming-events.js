@@ -13,7 +13,7 @@ async function getUpcomingEvents() {
 
         header.innerText = e.name;
         date.innerText = new Date(e.date).getMonth() + 1 + "/" + new Date(e.date).getDate();
-        description.innerText = e.description;
+        description.innerHTML = e.description;
 
         headContainer.appendChild(header);
         headContainer.appendChild(date);
