@@ -1,6 +1,6 @@
 body > header {
     background-color: rgb(var(--accent-color));
-    background-image: url("/Coffee/images/pexels-215906.jpg");
+    background-image: url("../images/pexels-215906.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -13,7 +13,7 @@ body > header {
 body > header:before {
     content: "";
     position: absolute;
-    background-image: url("/Coffee/images/BrewBarnLogo.svg");
+    background-image: url("../images/BrewBarnLogo.svg");
     background-position: 50% 5%;
     background-repeat: no-repeat;
     background-size: 40vw;
